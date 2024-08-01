@@ -1,8 +1,8 @@
 import React from 'react'
 import { Text, Container, Box } from "@chakra-ui/react";
 import Navbar from './Navbar.jsx';
-import { GlobeDemo } from "../components/CustomComponents/GlobeDemo.jsx";
 import { MeteorDemo } from '../components/CustomComponents/MeteorDemo.jsx';
+import {BorderBeamDemo} from "../components/CustomComponents/BorderBeam.jsx"
 const Hero = () => {
     return (
         <Container
@@ -11,6 +11,7 @@ const Hero = () => {
 
             {/* <GlobeDemo /> */}
             <MeteorDemo />
+            <BorderBeamDemo />
 
         </Container>
     )

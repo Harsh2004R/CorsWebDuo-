@@ -22,7 +22,7 @@ export function BorderBeamDemo() {
                 whiteSpace="pre-wrap"
                 textAlign="justify"
                 py="10"
-                px="2"
+               px={{base:"2",md:"10"}}
                 fontSize={{ base: "16px", md: "25px" }}
                 fontWeight="semibold"
                 bgGradient="linear(to-t, black, gray.300)"

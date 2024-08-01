@@ -1,14 +1,14 @@
 import Meteors from "@/components/magicui/meteors";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, Flex } from "@chakra-ui/react";
 
 export function MeteorDemo() {
   return (
     <Box
-      position={"relative"}  h="auto" py="100px"  w="auto"
-      className="flex flex-col items-center justify-center rounded-lg  bg-background md:shadow-xl"
-     overflow="hidden"
+    // border={"1px solid lime"} 
+    position={"relative"} h="auto" py="100px" w="100%"  overflow="hidden"
     >
-      <Meteors number={30} />
+      <Meteors number={20} />
+
       <Text
         pointerEvents="none"
         whiteSpace="pre-wrap"
@@ -26,6 +26,8 @@ export function MeteorDemo() {
       >
         Cors Web Duo
       </Text>
+
+
     </Box>
   );
 }

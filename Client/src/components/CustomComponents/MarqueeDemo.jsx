@@ -101,7 +101,7 @@ export function MarqueeDemo() {
             position="relative"
             display="flex"
             height="500px"
-            width={{ base: "100%", md: "85%", lg: "100%" }}
+            width={{ base: "100%", md: "65%", lg: "70%" }}
             m="auto"
             flexDirection="column"
             alignItems="center"

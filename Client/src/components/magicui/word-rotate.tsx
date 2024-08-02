@@ -44,7 +44,7 @@ export default function WordRotate({
           {...framerProps}
         >
           <Text
-            fontSize={{ base: "4xl", md: "8xl" }}
+            fontSize={{ base: "45px", md: "8xl" }}
             fontWeight="bold" textAlign={"center"}
             bgGradient="linear(to-b, black, gray.300)"
             bgClip="text"

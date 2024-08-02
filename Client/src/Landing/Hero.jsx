@@ -8,8 +8,6 @@ const Hero = () => {
         <Container
             // border="1px solid red"
             maxW='full' bg='#000' h={{base:"auto",md:"100vh"}}>
-
-            {/* <GlobeDemo /> */}
             <MeteorDemo />
             <BorderBeamDemo />
 

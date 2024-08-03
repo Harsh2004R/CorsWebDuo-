@@ -41,7 +41,7 @@ const Navbar = () => {
                     <span></span>
                     <span></span>
                 </button>
-                <a href="#" className="top-bar__brand">Cors<span style={{ color: "#78909C" }} className="auto-bounce">Web</span>Duo</a>
+                <a href="#" className="top-bar__brand">C<span style={{ color: "#78909C" }} className="auto-bounce">W</span>D</a>
                 <div className="top-bar__contact">
 
                 </div>

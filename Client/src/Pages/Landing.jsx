@@ -4,6 +4,7 @@ import Hero from '../Landing/Hero.jsx';
 import Navbar from '../Landing/Navbar.jsx';
 import { Box } from '@chakra-ui/react';
 import InstagramFeed from '../Landing/InstagramFeed.jsx';
+import Owner from '../Landing/Owner.jsx';
 const Landing = () => {
   return (
     <>
@@ -11,6 +12,7 @@ const Landing = () => {
       {/* <Box w="100%" h="100vh" bg="grey"></Box> */}
       <Hero />
       <InstagramFeed/>
+      <Owner/>
     </>
   )
 }

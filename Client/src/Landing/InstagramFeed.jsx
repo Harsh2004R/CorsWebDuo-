@@ -9,18 +9,17 @@ const InstagramFeed = () => {
     return (
         <Container
             // border="1px solid red"
-            maxW='full' bg='#000' h="500vh">
+            maxW='full' bg='#000' h="auto">
             <WordRotateDemo />
-            <Box w='100%' h={{ base: "5vh", md: "10", lg: "10" }} ></Box>
+            <Box w='100%' h={{ base: "5vh", md: "10vh", lg: "10vh" }} ></Box>
             <InstaClone />
-            <Box w='100%' h={{ base: "5vh", md: "10", lg: "10" }} ></Box>
-            <Box w={{ base: "100%", md: "80%", lg: "90%" }} h="auto" m='auto' bg="#000">
-                <WordRotate words={["Fan Feedbacks", "& Coments"]} />
-            </Box>
-            <Box w='100%' h={{ base: "5vh", md: "10", lg: "10" }} ></Box>
+            <Box w='100%' h={{ base: "5vh", md: "10vh", lg: "10vh" }} ></Box>
+
+            <WordRotate words={["Fan Feedbacks", "& Coments"]} />
+
+            <Box w='100%' h={{ base: "5vh", md: "10vh", lg: "10vh" }} ></Box>
             <MarqueeDemo />
-
-
+            <Box w='100%' h={{ base: "5vh", md: "10vh", lg: "10vh" }} ></Box>
         </Container>
     )
 }

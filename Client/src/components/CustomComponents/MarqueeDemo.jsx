@@ -100,7 +100,7 @@ export function MarqueeDemo() {
             overflow="hidden"
             position="relative"
             display="flex"
-            height="500px"
+            h="auto"
             width={{ base: "100%", md: "65%", lg: "70%" }}
             m="auto"
             flexDirection="column"
@@ -125,7 +125,7 @@ export function MarqueeDemo() {
                 insetY="0"
                 left="0"
                 width="33%"
-                bgGradient="linear(to-r, rgba(255,255,255,0.2), transparent)"
+            bgGradient="linear(to-r, rgba(255,255,255,0.3), transparent)"
             />
             <Box
                 pointerEvents="none"
@@ -133,7 +133,7 @@ export function MarqueeDemo() {
                 insetY="0"
                 right="0"
                 width="33%"
-                bgGradient="linear(to-l, rgba(255,255,255,0.2), transparent)"
+            bgGradient="linear(to-l, rgba(255,255,255,0.3), transparent)"
             />
         </Box>
     );

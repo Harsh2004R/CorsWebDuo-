@@ -1,7 +1,7 @@
 "use client";
 
 import React, { forwardRef, useRef } from "react";
-import { Box, Center, Flex, useToken,Text } from "@chakra-ui/react";
+import { Box, Center, Flex, useToken, Text } from "@chakra-ui/react";
 import { AnimatedBeam } from "@/components/magicui/animated-beam";
 
 const Circle = forwardRef(
@@ -57,9 +57,18 @@ export function AnimatedBeamDemo() {
                 px={{ base: "2", md: "8", lg: "10" }}
                 boxShadow="xl"
             >
-                <Flex h="full" w="full" direction="column" alignItems="stretch" justifyContent="space-between" gap="10">
-                {/* <Text fontSize={"4xl"} color="#fff">Harsh</Text> */}
-                <Flex direction="row" justifyContent="space-between">
+                <Flex h="full" w="full" direction="column" alignItems="stretch" justifyContent="space-between" gap="5">
+                    <Box w='100%' h="100%"  display={"flex"} flexDirection={"row"} justifyContent={"space-between"}>
+                        <Text
+                            fontSize={{ base: "md", md: "2xl", lg: "2xl" }} bgGradient="linear(to-l, #666666, gray.300)"
+                            bgClip="text"
+                            textAlign="center">Harsh Sharma</Text>
+                        <Text
+                            fontSize={{ base: "md", md: "2xl", lg: "2xl" }} bgGradient="linear(to-r, #666666, gray.200)"
+                            bgClip="text"
+                            textAlign="center">Deepanshu Joshi</Text>
+                    </Box>
+                    <Flex  direction="row" justifyContent="space-between">
                         <Circle ref={div1Ref} imageUrl="https://avatars.githubusercontent.com/u/115461808?v=4">
                             {/* Optional: fallback content */}
                         </Circle>
@@ -67,6 +76,16 @@ export function AnimatedBeamDemo() {
                             {/* Optional: fallback content */}
                         </Circle>
                     </Flex>
+                    <Box w='100%' h="100%" display={"flex"} flexDirection={"row"} justifyContent={"space-between"}>
+                        <Text
+                            fontSize={{ base: "sm", md: "xl", lg: "2xl" }} bgGradient="linear(to-l, #666666, gray.300)"
+                            bgClip="text"
+                            textAlign="center">(Founder)</Text>
+                        <Text
+                            fontSize={{ base: "sm", md: "2xl", lg: "2xl" }} bgGradient="linear(to-r, #666666, gray.200)"
+                            bgClip="text"
+                            textAlign="center">(CMO)</Text>
+                    </Box>
                 </Flex>
 
                 <AnimatedBeam

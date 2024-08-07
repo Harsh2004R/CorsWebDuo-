@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Container, Text } from '@chakra-ui/react'
 import { AnimatedBeamDemo } from '@/components/CustomComponents/AnimatedBeamDemo'
+import WithSpeechBubbles from '@/components/CustomComponents/WithSpeechBubbles'
 const Owner = () => {
     return (
         <>
@@ -24,6 +25,7 @@ const Owner = () => {
                 </Text>
 
                 <AnimatedBeamDemo />
+                <WithSpeechBubbles />
 
 
 

@@ -58,7 +58,7 @@ export function AnimatedBeamDemo() {
                 boxShadow="xl"
             >
                 <Flex h="full" w="full" direction="column" alignItems="stretch" justifyContent="space-between" gap="10">
-                <Text fontSize={"4xl"} color="#fff">Harsh</Text>
+                {/* <Text fontSize={"4xl"} color="#fff">Harsh</Text> */}
                 <Flex direction="row" justifyContent="space-between">
                         <Circle ref={div1Ref} imageUrl="https://avatars.githubusercontent.com/u/115461808?v=4">
                             {/* Optional: fallback content */}

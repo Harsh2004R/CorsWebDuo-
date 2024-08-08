@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { lazy } from 'react'
 import { Routes, Route } from "react-router-dom";
-import NoPage from '../Pages/NoPage';
-import Landing from "../Pages/Landing.jsx"
-import Services from '@/Pages/Services.jsx';
-import Projects from '@/Pages/Projects.jsx';
+// import NoPage from '../Pages/NoPage';
+// import Landing from "../Pages/Landing.jsx"
+const Landing = lazy(() => import("../Pages/Landing.jsx"))
+const Services = lazy(() => import("../Pages/Services.jsx"))
+const Projects = lazy(() => import("../Pages/Projects.jsx"))
+const NoPage = lazy(() => import("../Pages/NoPage.jsx"))
 const AllRoutes = () => {
     return (
         <Routes>

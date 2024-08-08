@@ -5,7 +5,7 @@ export function WordRotateDemo() {
     return (
         <>
 
-            <Box w={{ base: "100%", md: "80%", lg: "90%" }} h="auto" m='auto' bg="#000">
+            <Box  w={{ base: "100%", md: "80%", lg: "90%" }} h="auto" m='auto' bg="#000">
                 <WordRotate words={["Instagram Feed", "Just check Out"]} />
             </Box>
 

@@ -13,13 +13,11 @@ const InstagramFeed = () => {
             <WordRotateDemo />
             <Box w='100%' h={{ base: "5vh", md: "10vh", lg: "10vh" }} ></Box>
             <InstaClone />
-            <Box w='100%' h={{ base: "5vh", md: "10vh", lg: "10vh" }} ></Box>
-
             <WordRotate words={["Fan Feedbacks", "& Coments"]} />
 
             <Box w='100%' h={{ base: "5vh", md: "10vh", lg: "10vh" }} ></Box>
             <MarqueeDemo />
-            <Box w='100%' h={{ base: "5vh", md: "10vh", lg: "10vh" }} ></Box>
+            <Box w='100%' h={{ base: "5vh", md: "10vh", lg: "10vh" }}></Box>
         </Container>
     )
 }

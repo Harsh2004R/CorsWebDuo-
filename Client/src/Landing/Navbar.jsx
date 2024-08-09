@@ -34,14 +34,13 @@ const Navbar = () => {
 
     return (
         <>
-
             <div className="top-bar">
                 <button className="top-bar__nav-toggle hamburger" id="top-nav-toggle">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <a href="#" className="top-bar__brand">C<span style={{ color: "#78909C" }} className="auto-bounce">W</span>D</a>
+                <a href="/" className="top-bar__brand">C<span style={{ color: "#78909C" }} className="auto-bounce">W</span>D</a>
                 <div className="top-bar__contact">
 
                 </div>
@@ -50,14 +49,13 @@ const Navbar = () => {
                 </div>
                 <nav className="top-bar__nav collapsed" id="top-bar__nav">
                     <ul className="top-bar__nav-list">
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/about">About us</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
-
         </>
     )
 }

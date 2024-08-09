@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Assuming you're using React Router for navigation
-import "./Footer.css";
+import "./Footer.css"
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const ToggleFooterNav = () => {
@@ -9,7 +9,7 @@ const ToggleFooterNav = () => {
 
     // Determine the current page and the previous/next pages
     const currentPage = window.location.pathname; // Get the current URL path
-    const pages = ["/", "/services", "/projects"];
+    const pages = ["/", "/services", "/projects", "/faq"];
     const currentIndex = pages.indexOf(currentPage);
 
     const handleToggle = () => {

@@ -1,0 +1,91 @@
+.faq {
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+  width: 80%;
+}
+
+.faq-icon {
+  height: 18px;
+  width: 18px;
+  margin-top: 3px;
+  color: red;
+}
+
+.accordion {
+  background-color: #333333;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  color: #fff;
+  text-align: left;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: #B3E5FC;
+  color: black;
+}
+
+.active {
+  border-radius: 10px 10px 0px 0px;
+}
+
+.details-description {
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.panel {
+  padding: 0 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: rgba(0,0,0,0.2);
+  margin-top: -28px;
+  color: #9f9f9f;
+  display: none;
+  overflow: hidden;
+  border-radius: 0px 0px 10px 10px;
+  text-align: left;
+  border-right: 0.5px solid rgb(160, 164, 164);
+  border-left: 0.5px solid rgb(160, 164, 164);
+  box-shadow: rgba(3, 102, 214, 0.2) 0px 0px 0px 2px;
+}
+
+.panel,
+.accordion {
+  margin-bottom: 2rem;
+}
+
+button.accordion {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.paragraphs {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  white-space: pre-wrap;
+}
+
+.header {
+  font-weight: 600;
+  font-family: 'Verdana', sans-serif;
+  color: #FAFAFA;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #FAFAFA,
+    /* 1px 2px 0px #FAFAFA, */
+    1px 3px 0px #03A9F4,
+    1px 4px 0px #03A9F4,
+    1px 5px 0px #FAFAFA,
+    /* 1px 6px 0px #FAFAFA, */
+    1px 10px 5px rgba(16, 16, 16, 0.5),
+    1px 15px 10px rgba(16, 16, 16, 0.4),
+    1px 20px 30px rgba(16, 16, 16, 0.3),
+    1px 25px 50px rgba(16, 16, 16, 0.2);
+}

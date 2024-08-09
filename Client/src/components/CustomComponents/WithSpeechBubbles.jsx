@@ -95,10 +95,10 @@ export default function WithSpeechBubbles() {
                     spacing={{ base: 10, md: 4, lg: 10 }}>
                     <Testimonial>
                         <TestimonialContent>
-                            <TestimonialHeading>Sr. Full Stack Dev</TestimonialHeading>
+                            <TestimonialHeading>Full Stack Dev</TestimonialHeading>
                             {/* <Text textAlign={"left"} fontSize={{base:"12px",md:"13px",lg:"14px"}} color='#2196F3'>- Harsh Sharma</Text> */}
                             <TestimonialText>
-                                I am Harsh, a senior full stack developer, graduate from <Text as="span" color="#F44336" fontWeight={"bold"}> Masai School</Text>.
+                                I am Harsh, a full stack developer, graduate from <Text as="span" color="#F44336" fontWeight={"bold"}> Masai School</Text>.
                                 As the founder of CorsWebDuo Coding Agency, I lead a team focused on
                                 delivering top-notch web development solutions.
 
@@ -132,10 +132,10 @@ export default function WithSpeechBubbles() {
                     </Testimonial>
                     <Testimonial>
                         <TestimonialContent>
-                            <TestimonialHeading>Sr. Full Stack Dev</TestimonialHeading>
+                            <TestimonialHeading>Full Stack Dev</TestimonialHeading>
                             {/* <Text textAlign={"left"} fontSize={{base:"12px",md:"13px",lg:"14px"}} color='#2196F3'>- Diwakar Sharma</Text> */}
                             <TestimonialText>
-                                Diwakar Sharma, a senior full stack developer, graduate from
+                                Diwakar Sharma, a full stack developer, graduate from
                                 <Text as="span" color="#F44336" fontWeight={"bold"}> Masai School</Text>.
                                 As the Senior Developer at CorsWebDuo Coding Agency, I lead efforts to build fully-fledged applications along with my team.
                             </TestimonialText>

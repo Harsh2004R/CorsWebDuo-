@@ -7,9 +7,10 @@ const Services = () => {
         <>
             <Navbar />
             <Box w="100%" h="100vh" bg="#000">
-                <Text color="#fff">Services</Text>
-                <Footer />
+
+
             </Box>
+            <Footer />
 
         </>
     )

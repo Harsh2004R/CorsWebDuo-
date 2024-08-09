@@ -51,7 +51,7 @@ const Navbar = () => {
                 <nav className="top-bar__nav collapsed" id="top-bar__nav">
                     <ul className="top-bar__nav-list">
                         <li><a href="#">Services</a></li>
-                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">About us</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>

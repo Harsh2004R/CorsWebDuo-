@@ -2,16 +2,16 @@ import React from 'react'
 import Footer from "../components/CustomComponents/Footer.jsx"
 import Navbar from '../Landing/Navbar.jsx';
 import { Box, Text } from '@chakra-ui/react'
-const Projects = () => {
+const About = () => {
     return (
         <>
             <Navbar />
             <Box w="100%" h="100vh" bg="#000">
-                <Text color="#fff">Projects</Text>
+                <Text color="#fff">About us</Text>
                 <Footer />
             </Box>
         </>
     )
 }
 
-export default Projects
+export default About

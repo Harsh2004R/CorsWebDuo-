@@ -7,7 +7,7 @@ const Owner = () => {
         <>
             <Container
                 // border="1px solid red"
-                maxW='full' bg='#000' h="1000vh"
+                maxW='full' bg='#000' h="auto" mb="50px"
             >
 
                 {/* Owner section Heading here.... */}

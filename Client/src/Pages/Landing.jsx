@@ -10,15 +10,9 @@ const Landing = () => {
   return (
     <>
       <Navbar />
-      {/* <Box w="100%" h="100vh" bg="grey"></Box> */}
       <Hero />
       <InstagramFeed />
       <Owner />
-
-
-
-
-
       <Footer />
     </>
   )

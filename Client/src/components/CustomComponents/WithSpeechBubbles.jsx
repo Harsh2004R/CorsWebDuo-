@@ -98,7 +98,7 @@ export default function WithSpeechBubbles() {
                             <TestimonialHeading>Sr. Full Stack Dev</TestimonialHeading>
                             {/* <Text textAlign={"left"} fontSize={{base:"12px",md:"13px",lg:"14px"}} color='#2196F3'>- Harsh Sharma</Text> */}
                             <TestimonialText>
-                                I am Harsh, a senior full stack developer, graduate from <Text as="span" color="#F44336" fontWeight={"bold"}>Masai School</Text>.
+                                I am Harsh, a senior full stack developer, graduate from <Text as="span" color="#F44336" fontWeight={"bold"}> Masai School</Text>.
                                 As the founder of CorsWebDuo Coding Agency, I lead a team focused on
                                 delivering top-notch web development solutions.
 
@@ -136,7 +136,7 @@ export default function WithSpeechBubbles() {
                             {/* <Text textAlign={"left"} fontSize={{base:"12px",md:"13px",lg:"14px"}} color='#2196F3'>- Diwakar Sharma</Text> */}
                             <TestimonialText>
                                 Diwakar Sharma, a senior full stack developer, graduate from
-                                <Text as="span" color="#F44336" fontWeight={"bold"}>Masai School</Text>.
+                                <Text as="span" color="#F44336" fontWeight={"bold"}> Masai School</Text>.
                                 As the Senior Developer at CorsWebDuo Coding Agency, I lead efforts to build fully-fledged applications along with my team.
                             </TestimonialText>
                         </TestimonialContent>
@@ -154,3 +154,4 @@ export default function WithSpeechBubbles() {
         </Box>
     )
 }
+

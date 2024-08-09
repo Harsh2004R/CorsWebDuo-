@@ -5,7 +5,7 @@ export function BorderBeamDemo() {
     return (
         <Box
             overflow="hidden"
-            w={{base:"100%",md:"65%",lg:"60%"}}
+            w={{ base: "100%", md: "65%", lg: "60%" }}
             h="auto"
             position="relative"
             display="flex"
@@ -17,12 +17,26 @@ export function BorderBeamDemo() {
             bg="#000" m="auto"
             shadow={{ md: "xl" }}
         >
+              <Text
+                pointerEvents="none"
+                whiteSpace="pre-wrap"
+                textAlign="justify"
+                
+                px={{ base: "2", md: "10" }}
+                fontSize={{ base: "35px", md: "65px" }}
+                fontWeight="semibold"
+                bgGradient="linear(to-t, black, gray.300)"
+                bgClip="text"
+
+            >
+                A coding club
+            </Text>
             <Text
                 pointerEvents="none"
                 whiteSpace="pre-wrap"
                 textAlign="justify"
                 py="10"
-               px={{base:"2",md:"10"}}
+                px={{ base: "2", md: "10" }}
                 fontSize={{ base: "16px", md: "25px" }}
                 fontWeight="semibold"
                 bgGradient="linear(to-t, black, gray.300)"
@@ -33,6 +47,8 @@ export function BorderBeamDemo() {
                 personal website, a robust e-commerce platform, or a dynamic web application, our
                 expert team is here to deliver cutting-edge solutions tailored to your needs.
             </Text>
+            <BorderBeam size={250} duration={12} delay={9} />
+          
             <BorderBeam size={250} duration={12} delay={9} />
         </Box >
 

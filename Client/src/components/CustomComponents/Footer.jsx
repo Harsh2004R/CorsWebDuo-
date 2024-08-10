@@ -9,7 +9,7 @@ const ToggleFooterNav = () => {
 
     // Determine the current page and the previous/next pages
     const currentPage = window.location.pathname; // Get the current URL path
-    const pages = ["/", "/services", "/projects", "/faq"];
+    const pages = ["/", "/services", "/projects", "/contact", "/faq"];
     const currentIndex = pages.indexOf(currentPage);
 
     const handleToggle = () => {

@@ -6,7 +6,9 @@ const Landing = lazy(() => import("../Pages/Landing.jsx"))
 const Services = lazy(() => import("../Pages/Services.jsx"))
 const About = lazy(() => import("../Pages/About.jsx/"))
 const NoPage = lazy(() => import("../Pages/NoPage.jsx"))
+const Contact = lazy(() => import("../Pages/Contact.jsx"))
 const FAQ = lazy(() => import("../Pages/FAQ.jsx"))
+
 const AllRoutes = () => {
     return (
         <Suspense fallback={<Skeleton></Skeleton>}>
@@ -14,6 +16,7 @@ const AllRoutes = () => {
                 <Route path="/" element={<Landing />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/projects" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="" element={""} />
                 <Route path="" element={""} />

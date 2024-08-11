@@ -9,11 +9,14 @@ import Footer from "../components/CustomComponents/Footer.jsx"
 const Landing = () => {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <InstagramFeed />
-      <Owner />
-      <Footer />
+      <Box w="100%" h="auto">
+        <Navbar />
+        <Hero />
+        <InstagramFeed />
+        <Owner />
+        <Footer />
+      </Box>
+
     </>
   )
 }

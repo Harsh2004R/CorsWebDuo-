@@ -10,8 +10,9 @@ import {
     Container,
     Avatar,
     useColorModeValue,
+    Image,
 } from '@chakra-ui/react';
-
+import CMO from "../Images/CMO.png"
 const Testimonial = ({ children }) => {
     return <Box>{children}</Box>;
 };
@@ -70,7 +71,7 @@ const TestimonialText = ({ children }) => {
 const TestimonialAvatar = ({ src, name, title }) => {
     return (
         <Flex align={'center'} mt={8} direction={'column'}>
-            <Avatar src={src} mb={2} />
+            <Image src={src} boxSize={"50px"} borderRadius={"50%"} mb={2} />
             <Stack spacing={-1} align={'center'}>
                 <Text fontWeight={600} color="#1E88E5" textShadow="0px 2px 9px #FAFAFA">{name}</Text>
                 <Text fontSize={'sm'} color="#1E88E5">
@@ -123,12 +124,11 @@ export default function WithSpeechBubbles() {
                             </TestimonialText>
                         </TestimonialContent>
                         <TestimonialAvatar
-                            src={
-                                'https://avatars.githubusercontent.com/u/128475017?s=80&v=4'
-                            }
+                            src={CMO}
                             name={'Deepanshu Joshi'}
                         // title={""}
                         />
+
                     </Testimonial>
                     <Testimonial>
                         <TestimonialContent>

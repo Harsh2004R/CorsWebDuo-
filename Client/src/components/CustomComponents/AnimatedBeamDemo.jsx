@@ -3,7 +3,7 @@
 import React, { forwardRef, useRef } from "react";
 import { Box, Center, Flex, useToken, Text } from "@chakra-ui/react";
 import { AnimatedBeam } from "@/components/magicui/animated-beam";
-
+import CMO from "../Images/CMO.png"
 const Circle = forwardRef(
     ({ className, children, imageUrl }, ref) => {
         const shadow = useToken("shadows", "md");
@@ -72,7 +72,7 @@ export function AnimatedBeamDemo() {
                         <Circle ref={div1Ref} imageUrl="https://avatars.githubusercontent.com/u/115461808?v=4">
                             {/* Optional: fallback content */}
                         </Circle>
-                        <Circle ref={div2Ref} imageUrl="https://avatars.githubusercontent.com/u/112754638?v=4">
+                        <Circle ref={div2Ref} imageUrl={CMO}>
                             {/* Optional: fallback content */}
                         </Circle>
                     </Flex>

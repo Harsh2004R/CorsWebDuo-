@@ -12,7 +12,8 @@ const Services = () => {
                 <ServicesHero />
 
             </Box>
-            {/* <Footer /> */}
+
+            <Footer />
 
         </>
     )

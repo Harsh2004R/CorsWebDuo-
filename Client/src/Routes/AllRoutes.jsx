@@ -11,7 +11,7 @@ const FAQ = lazy(() => import("../Pages/FAQ.jsx"))
 
 const AllRoutes = () => {
     return (
-        <Suspense fallback={<Skeleton></Skeleton>}>
+        <Suspense fallback={<p>suspense</p>}>
             <Routes>
                 <Route path="/" element={<Landing />} />
                 <Route path="/services" element={<Services />} />

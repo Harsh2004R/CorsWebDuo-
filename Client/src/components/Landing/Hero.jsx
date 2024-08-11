@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container } from "@chakra-ui/react";
-import { MeteorDemo } from '../components/CustomComponents/MeteorDemo.jsx';
-import { BorderBeamDemo } from "../components/CustomComponents/BorderBeam.jsx"
-import { WordRotateDemo } from '../components/CustomComponents/WordRotate.jsx';
+import { MeteorDemo } from '../CustomComponents/MeteorDemo.jsx';
+import { BorderBeamDemo } from "../CustomComponents/BorderBeam.jsx"
+import { WordRotateDemo } from '../CustomComponents/WordRotate.jsx';
 const Hero = () => {
     return (
         <Container

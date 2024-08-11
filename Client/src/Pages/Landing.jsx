@@ -1,10 +1,10 @@
 
 import React from 'react'
-import Hero from '../Landing/Hero.jsx';
-import Navbar from '../Landing/Navbar.jsx';
+import Hero from '../components/Landing/Hero.jsx';
+import Navbar from '../components/Landing/Navbar.jsx';
 import { Box } from '@chakra-ui/react';
-import InstagramFeed from '../Landing/InstagramFeed.jsx';
-import Owner from '../Landing/Owner.jsx';
+import InstagramFeed from '../components/Landing/InstagramFeed.jsx';
+import Owner from '../components/Landing/Owner.jsx';
 import Footer from "../components/CustomComponents/Footer.jsx"
 const Landing = () => {
   return (

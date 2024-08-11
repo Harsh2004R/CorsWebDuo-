@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Footer from "../components/CustomComponents/Footer.jsx";
-import Navbar from '../Landing/Navbar.jsx';
+import Navbar from '../components/Landing/Navbar.jsx';
 import { Box, Center, Text } from '@chakra-ui/react';
 import "../CSS/FAQ.css";
 import { ChevronDownIcon } from '@chakra-ui/icons';

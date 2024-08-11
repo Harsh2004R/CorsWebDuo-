@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from "../components/CustomComponents/Footer.jsx"
-import Navbar from '../Landing/Navbar.jsx';
+import Navbar from '../components/Landing/Navbar.jsx';
 import { Box, Text } from '@chakra-ui/react'
 const About = () => {
     return (

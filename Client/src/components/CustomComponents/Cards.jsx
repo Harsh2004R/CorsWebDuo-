@@ -3,7 +3,7 @@ import "./Card.css";
 import anime from "animejs";
 import { useEffect } from "react";
 import { Text, Box } from "@chakra-ui/react";
-
+import { BorderBeam } from "@/components/magicui/border-beam";
 const Card = ({ data }) => {
     function readMore(a, b) {
         let message = `${a} - ${b}`;
@@ -33,22 +33,25 @@ const Card = ({ data }) => {
                     Tech's we mostly use
                 </Text>
             </Box>
-            <Box bg="#000" className="Card">
+            <Box overflow="hidden" bg="#000" className="Card">
                 {data.map((item, index) => (
-                    <Box border="1px solid red" className="box" key={index}>
+                    <Box overflow="hidden" position="relative" className="box" key={index}>
                         <img src={item.img} alt="" />
                         <h3>{item.title}</h3>
                         <p>{item.content}</p>
                         <a
-                            href={item.link}
+                            // href={item.link}
                             className="btn"
                             onClick={() => readMore(item.title, item.content)}
                         >
                             Read more
                         </a>
+                        <BorderBeam size={150} duration={10} delay={9} />
+                        <BorderBeam size={150} duration={20} delay={9} />
                     </Box>
                 ))}
             </Box>
+
         </>
     );
 };

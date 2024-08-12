@@ -35,13 +35,13 @@ const Techs = () => {
         {
             img: node,
             "title": "Node JS",
-            "content": "",
+            "content": "Node.js is a powerful JavaScript runtime built on Chrome's V8 engine, allowing you to run JavaScript code on the server side. It’s widely used for building scalable and efficient network applications, particularly for backend services and APIs...",
             "link": "#"
         },
         {
             img: mongo,
             "title": "Mongo db",
-            "content": "",
+            "content": "MongoDB is a NoSQL database known for its flexibility and scalability. It stores data in a JSON-like format, making it an excellent choice for applications that require dynamic, unstructured data and real-time processing...",
             "link": "#"
         },
         {
@@ -53,7 +53,7 @@ const Techs = () => {
         {
             img: chakra,
             "title": "Chakra UI",
-            "content": "",
+            "content": "Chakra UI is a modern React component library that simplifies the process of creating accessible and responsive user interfaces. It provides a set of customizable components that help developers build consistent and intuitive user experiences across different platforms...",
             "link": "#"
         },
         {

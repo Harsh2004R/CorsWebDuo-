@@ -5,6 +5,7 @@ import { Box, Text } from '@chakra-ui/react'
 import ServicesHero from '@/components/ServicesComponents/ServicesHero.jsx';
 import Details from '@/components/ServicesComponents/Details.jsx';
 import Techs from '@/components/ServicesComponents/Techs.jsx';
+import Icons from '@/components/ServicesComponents/Icons.jsx';
 const Services = () => {
     return (
         <>
@@ -14,6 +15,7 @@ const Services = () => {
                 <ServicesHero />
                 <Details />
                 <Techs />
+                <Icons />
 
             </Box>
 

@@ -9,7 +9,7 @@ import Footer from "../components/CustomComponents/Footer.jsx"
 const Landing = () => {
   return (
     <>
-      <Box w="100%" h="auto">
+      <Box w="100%" h="100vh" bg="#000"  >
         <Navbar />
         <Hero />
         <InstagramFeed />

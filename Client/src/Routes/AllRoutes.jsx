@@ -1,4 +1,4 @@
-import { Skeleton } from '@chakra-ui/react';
+import { SkeletonCircle, SkeletonText, Box } from '@chakra-ui/react';
 import React, { lazy, Suspense } from 'react'
 import { Routes, Route } from "react-router-dom";
 // import Landing from "../Pages/Landing.jsx"
@@ -11,7 +11,18 @@ const FAQ = lazy(() => import("../Pages/FAQ.jsx"))
 
 const AllRoutes = () => {
     return (
-        <Suspense fallback={<p>suspense</p>}>
+        <Suspense fallback={
+            <Box w="100%" h="100vh" bg="#000">
+                <Box padding='6' bg="#000" w="50%" h="auto" boxShadow='lg'>
+                    <SkeletonCircle size='10' />
+                    <SkeletonText mt='4' noOfLines={4} spacing='4' skeletonHeight='5' />
+                </Box>
+                <Box padding='6' bg="#000" w="100%" h="auto" boxShadow='lg' >
+                    <SkeletonCircle size='100px' />
+                    <SkeletonText mt='4' noOfLines={4} spacing='4' skeletonHeight='7' />
+                </Box>
+            </Box>
+        }>
             <Routes>
                 <Route path="/" element={<Landing />} />
                 <Route path="/services" element={<Services />} />

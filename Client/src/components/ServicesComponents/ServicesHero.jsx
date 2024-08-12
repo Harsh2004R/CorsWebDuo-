@@ -20,7 +20,7 @@ const ServicesHero = () => {
                                     h={{ base: "300px", md: "330px", lg: "500px" }}
                                     loading="lazy"
                                     src={globe}
-                                    alt=""
+                                    alt="globe.png"
                                 />
                             </Box>
                             <Box
@@ -37,14 +37,14 @@ const ServicesHero = () => {
                                 animation="marquee 9s linear infinite"
                                 color='#fff'
                             >
-                                 – CorsWebDuo, Your Local Partner for Expert Web Development!
+                                – CorsWebDuo, Your Local Partner for Expert Web Development!
                             </Box>
                         </Box>
 
                     </div>
                 </Box>
 
-                <style jsx global>{`
+                <style>{`
                 @keyframes marquee {
                     0% {
                         transform: translate3d(0, 0, 0);

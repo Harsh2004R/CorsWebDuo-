@@ -2,6 +2,7 @@ import React from "react";
 import "./Card.css";
 import anime from "animejs";
 import { useEffect } from "react";
+import { Text, Box } from "@chakra-ui/react";
 
 const Card = ({ data }) => {
     function readMore(a, b) {
@@ -26,12 +27,15 @@ const Card = ({ data }) => {
 
     return (
         <>
-            <div className="Heading">
-                <h1 className="text">Our services</h1>
-            </div>
-            <div className="Card">
+            <Box bg="#000" w="100%" h="auto">
+
+                <Text color="#fff" align={"center"} fontWeight={"bold"} fontSize={{ base: "30px", md: "35px", lg: "45px" }}>
+                    Tech's we mostly use
+                </Text>
+            </Box>
+            <Box bg="#000" className="Card">
                 {data.map((item, index) => (
-                    <div className="box" key={index}>
+                    <Box border="1px solid red" className="box" key={index}>
                         <img src={item.img} alt="" />
                         <h3>{item.title}</h3>
                         <p>{item.content}</p>
@@ -42,9 +46,9 @@ const Card = ({ data }) => {
                         >
                             Read more
                         </a>
-                    </div>
+                    </Box>
                 ))}
-            </div>
+            </Box>
         </>
     );
 };

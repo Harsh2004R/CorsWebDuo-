@@ -2,14 +2,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
   width: 100%;
 }
 
-h1 {
+.text {
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   font-size: 45px;
   animation: Header 1s ease;
+  color: #fff;
+  font-weight: 500;
 }
 
 @keyframes Header {
@@ -39,7 +40,6 @@ h1 {
 .box {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  background: #fff;
   text-align: center;
   padding: 30px 20px;
   display: flex;

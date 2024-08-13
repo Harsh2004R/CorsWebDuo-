@@ -47,7 +47,7 @@ const Card = ({ data }) => {
                             Read more
                         </a>
                         <BorderBeam size={150} duration={10} delay={9} />
-                        <BorderBeam size={150} duration={20} delay={9} />
+                        {/* <BorderBeam size={150} duration={20} delay={9} /> */}
                     </Box>
                 ))}
             </Box>

@@ -6,6 +6,7 @@ import ServicesHero from '@/components/ServicesComponents/ServicesHero.jsx';
 import Details from '@/components/ServicesComponents/Details.jsx';
 import Techs from '@/components/ServicesComponents/Techs.jsx';
 import Icons from '@/components/ServicesComponents/Icons.jsx';
+import Projects from '@/components/ServicesComponents/Projects.jsx';
 const Services = () => {
     return (
         <>
@@ -16,10 +17,12 @@ const Services = () => {
                 <Details />
                 <Techs />
                 <Icons />
-
+                <Projects />
+               
             </Box>
-
             <Footer />
+
+            
 
         </>
     )

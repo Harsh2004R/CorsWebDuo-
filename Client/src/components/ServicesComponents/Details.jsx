@@ -1,29 +1,32 @@
 import React from 'react';
 import { Box, Heading, Text, Grid } from '@chakra-ui/react';
-
+import vid1 from "../Videos/vid1.mp4"
+import vid2 from "../Videos/vid2.mp4"
+import vid3 from "../Videos/vid3.mp4"
+import vid4 from "../Videos/vid4.mp4"
 const services = [
     {
         title: 'UI/UX Creative Design',
         description: "We specialize in UI / UX Creative Design that transforms your ideas into visually stunning and user-friendly digital experiences. Our expert designers focus on creating intuitive interfaces that not only look great but also enhance user engagement.",
-        videoUrl: 'https://videos.pexels.com/video-files/2516160/2516160-hd_1920_1080_24fps.mp4',
+        videoUrl: vid1,
         circlePosition: { bottom: 0, right: 0, clipPath: 'circle(calc(6.25rem + 7.5vw) at 100% 100%)' },
     },
     {
         title: 'Strategy & Digital Marketing',
         description: 'Our expert team tailors marketing strategies to fit your unique needs. From detailed market analysis to innovative digital campaigns, we ensure your brand stands out and drives growth in today competitive landscape.',
-        videoUrl: 'https://videos.pexels.com/video-files/7578632/7578632-sd_960_506_25fps.mp4',
+        videoUrl: vid3,
         circlePosition: { bottom: 0, left: 0, clipPath: 'circle(calc(6.25rem + 7.5vw) at 0% 100%)' }
     },
     {
         title: 'Full Stack developers',
         description: 'We offer both junior and senior developers skilled in contributing to open source projects and building highly effective web apps. Our team is dedicated to delivering robust solutions that meet your business needs.',
-        videoUrl: 'https://videos.pexels.com/video-files/5474270/5474270-sd_960_506_25fps.mp4',
+        videoUrl: vid2,
         circlePosition: { top: 0, right: 0, clipPath: 'circle(calc(6.25rem + 7.5vw) at 100% 0%)' }
     },
     {
         title: 'FE / BE developers',
         description: 'We provide skilled developers for both front-end and back-end roles. Whether you need expertise in creating engaging user interfaces or building robust server-side solutions, you can choose the developer who best fits your project needs.',
-        videoUrl: 'https://videos.pexels.com/video-files/7026674/7026674-sd_360_640_24fps.mp4',
+        videoUrl: vid4,
         circlePosition: { top: 0, left: 0, clipPath: 'circle(calc(6.25rem + 7.5vw) at 0% 0%)' }
     }
 ];

@@ -1,4 +1,5 @@
 import IconCloud from "@/components/magicui/icon-cloud";
+import { Box, Flex } from "@chakra-ui/react";
 
 const slugs = [
   "typescript",
@@ -35,8 +36,22 @@ const slugs = [
 
 export function IconCloudDemo() {
   return (
-    <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background px-20 pb-20 pt-8 ">
+    <Box
+      // border="1px solid lime"
+      position="relative"
+      display="flex"
+      h="auto"
+      // maxW="32rem"
+      alignItems="center"
+      justifyContent="center"
+      overflow="hidden"
+      // borderRadius="lg"
+      bg="#000"
+      px="20"
+      pb="20"
+      pt="8"
+    >
       <IconCloud iconSlugs={slugs} />
-    </div>
+    </Box>
   );
 }

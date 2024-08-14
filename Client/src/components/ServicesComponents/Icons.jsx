@@ -1,6 +1,6 @@
 import React from 'react'
 import { IconCloudDemo } from '@/components/CustomComponents/IconCloudDemo.jsx';
-import { Box,Text } from '@chakra-ui/react';
+import { Box,Center,Text } from '@chakra-ui/react';
 const Icons = () => {
     return (
         <>

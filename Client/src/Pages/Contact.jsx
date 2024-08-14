@@ -2,13 +2,14 @@ import React from 'react'
 import Footer from "../components/CustomComponents/Footer.jsx"
 import Navbar from '../components/Landing/Navbar.jsx';
 import { Box, Text } from '@chakra-ui/react'
+import Form from '@/Contact/Form.jsx';
 const Contact = () => {
     return (
         <>
             <Navbar />
             <Box w="100%" h="100vh" bg="#000">
 
-
+                <Form />
             </Box>
             <Footer />
 

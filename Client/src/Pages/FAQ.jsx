@@ -14,7 +14,7 @@ const FAQ = () => {
     return (
         <>
             <Navbar />
-            <Box w="100%" h="auto" bg="#000">
+            <Box w="100%" h="100vh" bg="#000">
 
                 {/* <Text fontSize={"3xl"} color="#FAFAFA" >| FAQ |</Text>
                 <Text fontSize={"3xl"} color="grey" >Have a Questions</Text> */}
@@ -36,7 +36,7 @@ const FAQ = () => {
                                         </button>
                                         <div className="panel" style={{ display: activeIndex === index ? 'block' : 'none' }}>
                                             <div className="paragraphs" id={`myDiv_id${index + 1}`}></div>
-                                            <p id={`paragraph_id${index + 1}`} >{faq.answer}</p>
+                                            <Text py="15px" fontSize={{base:"xl",md:"2lg",lg:"3xl"}} id={`paragraph_id${index + 1}`} >{faq.answer}</Text>
                                         </div>
                                     </div>
                                 ))}

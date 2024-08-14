@@ -13,7 +13,7 @@ const Projects = () => {
                 // border={"1px solid blue"}
                 bg="#000" pb="50px" w="100%" h="auto">
                 <Box w="100%" h="auto" py="10" display={"flex"} justifyContent={"center"} >
-                    <Text color="#fff" fontSize={{ base: "2xl", md: "3xl", lg: "45px" }} fontWeight={"800"}>Already Served</Text>
+                    <Text color="#fff" fontSize={{ base: "2xl", md: "3xl", lg: "45px" }} fontWeight={"800"}>Platform's Served</Text>
                 </Box>
                 <Box className="grid-container">
                     <Box className="grid-item">
@@ -38,7 +38,7 @@ const Projects = () => {
                     </Box>
                     <Box className="grid-item">
                         <AspectRatio ratio={16 / 9} w="100%" h="100%">
-                            <Box transition="transform 2s ease" as="video" src={site4} filter="brightness(0.8) contrast(0.8)" _hover={{ filter: "brightness(1) contrast(1.2)", transform: "rotateX(10deg) rotateY(50deg) scale(1.02)", cursor: "pointer" }} autoPlay muted loop w="100%" h="100%" borderRadius="1em" objectFit="cover" />
+                            <Box transition="transform 2s ease" as="video" src={site4} filter="brightness(0.8) contrast(1.2)" _hover={{ filter: "brightness(1) contrast(0.8)", transform: "rotateX(10deg) rotateY(50deg) scale(1.02)", cursor: "pointer" }} autoPlay muted loop w="100%" h="100%" borderRadius="1em" objectFit="cover" />
                         </AspectRatio>
                     </Box>
                 </Box>

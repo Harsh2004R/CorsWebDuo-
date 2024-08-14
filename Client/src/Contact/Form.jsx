@@ -28,34 +28,34 @@ const Form1 = () => {
   const handleClick = () => setShow(!show)
   return (
     <>
-      <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
+      <Heading color="#fff" w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
         User Registration
       </Heading>
       <Flex>
         <FormControl mr="5%">
-          <FormLabel htmlFor="first-name" fontWeight={'normal'}>
+          <FormLabel color="#ccc" htmlFor="first-name" fontWeight={'normal'}>
             First name
           </FormLabel>
-          <Input id="first-name" placeholder="First name" />
+          <Input color="#ccc" id="first-name" placeholder="First name" />
         </FormControl>
 
         <FormControl>
-          <FormLabel htmlFor="last-name" fontWeight={'normal'}>
+          <FormLabel color="#ccc" htmlFor="last-name" fontWeight={'normal'}>
             Last name
           </FormLabel>
-          <Input id="last-name" placeholder="First name" />
+          <Input color="#ccc" id="last-name" placeholder="First name" />
         </FormControl>
       </Flex>
       <FormControl mt="2%">
-        <FormLabel htmlFor="email" fontWeight={'normal'}>
+        <FormLabel color="#ccc" htmlFor="email" fontWeight={'normal'}>
           Email address
         </FormLabel>
-        <Input id="email" type="email" />
-        <FormHelperText>We&apos;ll never share your email.</FormHelperText>
+        <Input color="#ccc" id="email" type="email" />
+        <FormHelperText color="#4FC3F7">We&apos;ll never share your email.</FormHelperText>
       </FormControl>
 
       <FormControl>
-        <FormLabel htmlFor="password" fontWeight={'normal'} mt="2%">
+        <FormLabel color="#ccc" htmlFor="password" fontWeight={'normal'} mt="2%">
           Password
         </FormLabel>
         <InputGroup size="md">
@@ -63,6 +63,7 @@ const Form1 = () => {
             pr="4.5rem"
             type={show ? 'text' : 'password'}
             placeholder="Enter password"
+            color="#ccc"
           />
           <InputRightElement width="4.5rem">
             <Button h="1.75rem" size="sm" onClick={handleClick}>
@@ -78,7 +79,7 @@ const Form1 = () => {
 const Form2 = () => {
   return (
     <>
-      <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
+      <Heading color="#ccc" w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
         User Details
       </Heading>
       <FormControl as={GridItem} colSpan={[6, 3]}>
@@ -86,7 +87,7 @@ const Form2 = () => {
           htmlFor="country"
           fontSize="sm"
           fontWeight="md"
-          color="gray.700"
+          color="#ccc"
           _dark={{
             color: 'gray.50',
           }}>
@@ -100,20 +101,75 @@ const Form2 = () => {
           focusBorderColor="brand.400"
           shadow="sm"
           size="sm"
+          color="#ccc"
+          _placeholder={{
+            color: "#ccc",
+          }}
+          _focus={{
+            color: "#81C784", 
+          }}
           w="full"
           rounded="md">
+          <option color="#000">India</option>
           <option>United States</option>
           <option>Canada</option>
           <option>Mexico</option>
+          <option>Brazil</option>
+          <option>United Kingdom</option>
+          <option>Germany</option>
+          <option>France</option>
+          <option>Italy</option>
+          <option>Spain</option>
+          <option>Australia</option>
+          <option>China</option>
+          <option>Japan</option>
+          <option>South Korea</option>
+          <option>Russia</option>
+          <option>South Africa</option>
+          <option>Egypt</option>
+          <option>Nigeria</option>
+          <option>Argentina</option>
+          <option>Chile</option>
+          <option>Colombia</option>
+          <option>Peru</option>
+          <option>Venezuela</option>
+          <option>Saudi Arabia</option>
+          <option>United Arab Emirates</option>
+          <option>Turkey</option>
+          <option>Israel</option>
+          <option>Iran</option>
+          <option>Pakistan</option>
+          <option>Bangladesh</option>
+          <option>Thailand</option>
+          <option>Vietnam</option>
+          <option>Indonesia</option>
+          <option>Malaysia</option>
+          <option>Philippines</option>
+          <option>New Zealand</option>
+          <option>Netherlands</option>
+          <option>Belgium</option>
+          <option>Sweden</option>
+          <option>Norway</option>
+          <option>Denmark</option>
+          <option>Finland</option>
+          <option>Switzerland</option>
+          <option>Austria</option>
+          <option>Poland</option>
+          <option>Portugal</option>
+          <option>Greece</option>
+          <option>Ukraine</option>
+          <option>Czech Republic</option>
+          <option>Hungary</option>
+
         </Select>
-      </FormControl>
+      </FormControl >
 
       <FormControl as={GridItem} colSpan={6}>
         <FormLabel
           htmlFor="street_address"
           fontSize="sm"
           fontWeight="md"
-          color="gray.700"
+          color="#ccc"
           _dark={{
             color: 'gray.50',
           }}
@@ -130,6 +186,7 @@ const Form2 = () => {
           size="sm"
           w="full"
           rounded="md"
+          color="#ccc"
         />
       </FormControl>
 
@@ -138,7 +195,7 @@ const Form2 = () => {
           htmlFor="city"
           fontSize="sm"
           fontWeight="md"
-          color="gray.700"
+          color="#ccc"
           _dark={{
             color: 'gray.50',
           }}
@@ -154,6 +211,7 @@ const Form2 = () => {
           shadow="sm"
           size="sm"
           w="full"
+          color="#ccc"
           rounded="md"
         />
       </FormControl>
@@ -163,7 +221,7 @@ const Form2 = () => {
           htmlFor="state"
           fontSize="sm"
           fontWeight="md"
-          color="gray.700"
+          color="#ccc"
           _dark={{
             color: 'gray.50',
           }}
@@ -174,6 +232,7 @@ const Form2 = () => {
           type="text"
           name="state"
           id="state"
+          color="#ccc"
           autoComplete="state"
           focusBorderColor="brand.400"
           shadow="sm"
@@ -188,12 +247,12 @@ const Form2 = () => {
           htmlFor="postal_code"
           fontSize="sm"
           fontWeight="md"
-          color="gray.700"
+          color="#ccc"
           _dark={{
             color: 'gray.50',
           }}
           mt="2%">
-          ZIP / Postal
+          ZIP / Postal (optional)
         </FormLabel>
         <Input
           type="text"
@@ -203,6 +262,7 @@ const Form2 = () => {
           focusBorderColor="brand.400"
           shadow="sm"
           size="sm"
+          color="#ccc"
           w="full"
           rounded="md"
         />
@@ -214,7 +274,7 @@ const Form2 = () => {
 const Form3 = () => {
   return (
     <>
-      <Heading w="100%" textAlign={'center'} fontWeight="normal">
+      <Heading  color="#ccc" w="100%" textAlign={'center'} fontWeight="normal">
         Social Handles
       </Heading>
       <SimpleGrid columns={1} spacing={6}>
@@ -222,11 +282,11 @@ const Form3 = () => {
           <FormLabel
             fontSize="sm"
             fontWeight="md"
-            color="gray.700"
+            color="#ccc"
             _dark={{
               color: 'gray.50',
             }}>
-            Website
+            Website | Portfolio (optional)
           </FormLabel>
           <InputGroup size="sm">
             <InputLeftAddon
@@ -251,11 +311,11 @@ const Form3 = () => {
           <FormLabel
             fontSize="sm"
             fontWeight="md"
-            color="gray.700"
+             color="#ccc"
             _dark={{
               color: 'gray.50',
             }}>
-            About
+            About (required) min 30 words.
           </FormLabel>
           <Textarea
             placeholder="you@example.com"
@@ -265,8 +325,9 @@ const Form3 = () => {
             fontSize={{
               sm: 'sm',
             }}
+             color="#ccc"
           />
-          <FormHelperText>
+          <FormHelperText  color="#29B6F6">
             Brief description for your profile. URLs are hyperlinked.
           </FormHelperText>
         </FormControl>
@@ -282,7 +343,73 @@ export default function Form() {
 
   return (
     <>
-      
+      <Box
+        borderWidth="1px"
+        rounded="lg"
+        shadow="1px 1px 3px rgba(0,0,0,0.3)"
+        maxWidth={800}
+        p={6}
+        m="auto"
+        as="form">
+        <Progress hasStripe value={progress} mb="5%" mx="5%" isAnimated></Progress>
+        {step === 1 ? <Form1 /> : step === 2 ? <Form2 /> : <Form3 />}
+        <ButtonGroup mt="5%" w="100%">
+          <Flex w="100%" justifyContent="space-between">
+            <Flex>
+              <Button
+                onClick={() => {
+                  setStep(step - 1)
+                  setProgress(progress - 33.33)
+                }}
+                isDisabled={step === 1}
+                colorScheme="blue"
+                variant="solid"
+                w="7rem"
+                mr="5%">
+                Back
+              </Button>
+              <Button
+                w="7rem"
+                isDisabled={step === 3}
+                onClick={() => {
+
+
+
+
+
+
+                  setStep(step + 1)
+                  if (step === 3) {
+                    setProgress(100)
+                  } else {
+                    setProgress(progress + 33.33)
+                  }
+                }}
+                colorScheme="blue"
+                variant="outline">
+                Next
+              </Button>
+            </Flex>
+            {step === 3 ? (
+              <Button
+                w="7rem"
+                colorScheme="red"
+                variant="solid"
+                onClick={() => {
+                  toast({
+                    title: 'Account created.',
+                    description: "We've created your account for you.",
+                    status: 'success',
+                    duration: 3000,
+                    isClosable: true,
+                  })
+                }}>
+                Submit
+              </Button>
+            ) : null}
+          </Flex>
+        </ButtonGroup>
+      </Box>
     </>
   )
 }

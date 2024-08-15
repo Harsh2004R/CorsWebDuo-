@@ -457,7 +457,7 @@ export default function Form() {
               rounded="lg"
               shadow="1px 1px 3px rgba(0,0,0,0.3)"
               maxWidth={800}
-              p={4}
+              p={0}
               m="auto"
               as="form">
               <Progress rounded={"md"} hasStripe value={progress} mb="5%" mx="5%" isAnimated></Progress>

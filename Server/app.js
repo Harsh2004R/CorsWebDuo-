@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from "cors"
 import connection from "./db.js"
 import OwnerRouter from "./routes/Owner.routes.js";
+import ContactRouter from "./routes/Contact.routes.js";
 
 dotenv.config();
 const app = express();
@@ -14,6 +15,7 @@ app.get("/", (req, res) => {
     res.send("Entery point...")
 })
 app.use("/admin",OwnerRouter)
+app.use("/formdata",ContactRouter)
 
 const PORT = process.env.PORT
 app.listen(PORT, async () => {

@@ -6,7 +6,7 @@ const OwnerRouter = express.Router();
 OwnerRouter.post("/signup", async (req, res) => {
     const { name, email, password } = req.body;
 
-    const exist = admin.findOne({ email })
+    const exist = await admin.findOne({ email })
     if (exist) {
         res.status(400).json({ msg: "User Already Exist....in data base" })
     } else {
@@ -25,7 +25,7 @@ OwnerRouter.post("/signup", async (req, res) => {
 });
 
 
-OwnerRouter.post("/login", async (req,res) => {
+OwnerRouter.post("/login", async (req, res) => {
     const { email, password } = req.body;
 
     try {
@@ -39,10 +39,10 @@ OwnerRouter.post("/login", async (req,res) => {
         if (!match) {
             return res.status(400).json({ msg: "Invalid credentials" });
         }
-       
+
         res.status(200).json({
             msg: "Login successful",
-            
+
             admin: {
                 Id: user._id,
                 email: user.email,

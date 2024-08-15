@@ -403,7 +403,7 @@ export default function Form() {
         p={4}
         m="auto"
         as="form">
-        <Progress hasStripe value={progress} mb="5%" mx="5%" isAnimated></Progress>
+        <Progress rounded={"md"} hasStripe value={progress} mb="5%" mx="5%" isAnimated></Progress>
         {step === 1 ? <Form1 formData={formData} handleInputChange={handleInputChange} /> : step === 2 ? <Form2 formData={formData} handleInputChange={handleInputChange} /> : <Form3 formData={formData} handleInputChange={handleInputChange} />}
         <ButtonGroup mt="5%" w="100%">
           <Flex w="100%" justifyContent="space-between">

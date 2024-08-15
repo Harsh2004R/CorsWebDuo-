@@ -8,6 +8,7 @@ const About = lazy(() => import("../Pages/About.jsx/"))
 const NoPage = lazy(() => import("../Pages/NoPage.jsx"))
 const Contact = lazy(() => import("../Pages/Contact.jsx"))
 const FAQ = lazy(() => import("../Pages/FAQ.jsx"))
+const AdminAuth = lazy(()=>import("../Pages/AdminAuth.jsx"))
 
 const AllRoutes = () => {
     return (
@@ -29,7 +30,7 @@ const AllRoutes = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/faq" element={<FAQ />} />
-                <Route path="" element={""} />
+                <Route path="/admin" element={<AdminAuth/>} />
                 <Route path="" element={""} />
                 <Route path="" element={""} />
                 <Route path="" element={""} />

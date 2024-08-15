@@ -84,8 +84,6 @@ export default function UserProfileEdit() {
                     })
                 }
             }
-
-
         } else {
             //    making post req for Login here...
             if (loginData.email === "" || null) {
@@ -99,26 +97,22 @@ export default function UserProfileEdit() {
                 try {
                     const res = await axios.post(`${BASE_URL}admin/login`, loginData)
                     if (res.status === 200) {
-                        const adminToken = res.data.token;
-                        localStorage.setItem("ADMIN_TOKEN", adminToken)
                         setLoading(false)
-                        setTimeout(
-                            () => {
-                              
-                                navigate(`/admin/dashboard`)
-                            }, 1500)
+                        navigate(`/admin/dashboard`)
                     }
-
-
                 } catch (error) {
-                    setLoading(false)
+                    setLoading(true)
                     console.log("new error in logging Admin ", error)
+                    // toast({
+                    //     title: 'Login Failed',
+                    //     description: "Correct email | password required",
+                    //     status: 'error',
+                    //     duration: 5000,
+                    //     isClosable: true,
+                    // })
                 }
-
             }
-
         }
-
     }
     const toggleForms = () => {
         clicked ? setClicked(!true) : setClicked(true)
@@ -154,7 +148,7 @@ export default function UserProfileEdit() {
                                 <FormLabel></FormLabel>
                                 <Stack direction={['column', 'row']} spacing={6}>
                                     <Center>
-                                        <Avatar size="xl" src="https://bit.ly/sage-adebayo">
+                                        <Avatar size="xl" src="https://img.freepik.com/free-vector/follow-me-social-business-theme-design_24877-50426.jpg?ga=GA1.1.1559264531.1691417508&semt=ais_hybrid">
                                             <AvatarBadge
                                                 as={IconButton}
                                                 size="sm"
@@ -241,7 +235,7 @@ export default function UserProfileEdit() {
                                 </Button>
                             </Stack>
                         </Stack>
-                      
+
                     </Flex >
 
 

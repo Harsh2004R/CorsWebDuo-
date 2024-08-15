@@ -400,7 +400,7 @@ export default function Form() {
         rounded="lg"
         shadow="1px 1px 3px rgba(0,0,0,0.3)"
         maxWidth={800}
-        p={6}
+        p={4}
         m="auto"
         as="form">
         <Progress hasStripe value={progress} mb="5%" mx="5%" isAnimated></Progress>
@@ -457,6 +457,7 @@ export default function Form() {
           </Flex>
         </ButtonGroup>
       </Box>
+      <Box p="50px" bg="#000"></Box>
     </>
   )
 }

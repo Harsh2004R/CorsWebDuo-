@@ -23,9 +23,9 @@ import {
 
 import { useToast } from '@chakra-ui/react'
 
-const Form1 = () => {
+const Form1 = ({ formData, handleInputChange }) => {
   const [show, setShow] = useState(false)
-  const handleClick = () => setShow(!show)
+  // const handleClick = () => setShow(!show)
   return (
     <>
       <Heading color="#fff" w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
@@ -36,39 +36,52 @@ const Form1 = () => {
           <FormLabel color="#ccc" htmlFor="first-name" fontWeight={'normal'}>
             First name
           </FormLabel>
-          <Input color="#ccc" id="first-name" placeholder="First name" />
+          <Input color="#ccc" id="first-name" placeholder="First name"
+            name="firstName"
+            value={formData.firstName}
+            onChange={handleInputChange} />
         </FormControl>
 
         <FormControl>
           <FormLabel color="#ccc" htmlFor="last-name" fontWeight={'normal'}>
             Last name
           </FormLabel>
-          <Input color="#ccc" id="last-name" placeholder="First name" />
+          <Input color="#ccc" id="last-name" placeholder="First name"
+            name="lastName"
+            value={formData.lastName}
+            onChange={handleInputChange} />
         </FormControl>
       </Flex>
       <FormControl mt="2%">
         <FormLabel color="#ccc" htmlFor="email" fontWeight={'normal'}>
           Email address
         </FormLabel>
-        <Input color="#ccc" id="email" type="email" />
+        <Input color="#ccc" id="email" placeholder="test@gmail.com" type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleInputChange} />
         <FormHelperText color="#4FC3F7">We&apos;ll never share your email.</FormHelperText>
       </FormControl>
 
       <FormControl>
         <FormLabel color="#ccc" htmlFor="password" fontWeight={'normal'} mt="2%">
-          Password
+          Contact No.
         </FormLabel>
         <InputGroup size="md">
           <Input
             pr="4.5rem"
-            type={show ? 'text' : 'password'}
-            placeholder="Enter password"
+            // type={show ? 'text' : 'password'}
+            type={"text"}
+            placeholder="your contact number"
             color="#ccc"
+            name="contact"
+            value={formData.contact}
+            onChange={handleInputChange}
           />
           <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
+            {/* <Button h="1.75rem" size="sm" onClick={handleClick}>
               {show ? 'Hide' : 'Show'}
-            </Button>
+            </Button> */}
           </InputRightElement>
         </InputGroup>
       </FormControl>
@@ -76,7 +89,7 @@ const Form1 = () => {
   )
 }
 
-const Form2 = () => {
+const Form2 = ({ formData, handleInputChange }) => {
   return (
     <>
       <Heading color="#ccc" w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
@@ -96,6 +109,8 @@ const Form2 = () => {
         <Select
           id="country"
           name="country"
+          value={formData.country}
+          onChange={handleInputChange}
           autoComplete="country"
           placeholder="Select option"
           focusBorderColor="brand.400"
@@ -106,7 +121,7 @@ const Form2 = () => {
             color: "#ccc",
           }}
           _focus={{
-            color: "#81C784", 
+            color: "#81C784",
           }}
           w="full"
           rounded="md">
@@ -178,7 +193,9 @@ const Form2 = () => {
         </FormLabel>
         <Input
           type="text"
-          name="street_address"
+          name="streetAddress"
+          value={formData.streetAddress}
+          onChange={handleInputChange}
           id="street_address"
           autoComplete="street-address"
           focusBorderColor="brand.400"
@@ -205,6 +222,8 @@ const Form2 = () => {
         <Input
           type="text"
           name="city"
+          value={formData.city}
+          onChange={handleInputChange}
           id="city"
           autoComplete="city"
           focusBorderColor="brand.400"
@@ -231,6 +250,8 @@ const Form2 = () => {
         <Input
           type="text"
           name="state"
+          value={formData.state}
+          onChange={handleInputChange}
           id="state"
           color="#ccc"
           autoComplete="state"
@@ -256,7 +277,9 @@ const Form2 = () => {
         </FormLabel>
         <Input
           type="text"
-          name="postal_code"
+          name="postalCode"
+          value={formData.postalCode}
+          onChange={handleInputChange}
           id="postal_code"
           autoComplete="postal-code"
           focusBorderColor="brand.400"
@@ -271,10 +294,10 @@ const Form2 = () => {
   )
 }
 
-const Form3 = () => {
+const Form3 = ({ formData, handleInputChange }) => {
   return (
     <>
-      <Heading  color="#ccc" w="100%" textAlign={'center'} fontWeight="normal">
+      <Heading color="#ccc" w="100%" textAlign={'center'} fontWeight="normal">
         Social Handles
       </Heading>
       <SimpleGrid columns={1} spacing={6}>
@@ -296,13 +319,17 @@ const Form3 = () => {
               }}
               color="gray.500"
               rounded="md">
-              http://
+              https://
             </InputLeftAddon>
             <Input
               type="tel"
               placeholder="www.example.com"
               focusBorderColor="brand.400"
+              color="#ccc"
               rounded="md"
+              name="website"
+              value={formData.website}
+              onChange={handleInputChange}
             />
           </InputGroup>
         </FormControl>
@@ -311,24 +338,28 @@ const Form3 = () => {
           <FormLabel
             fontSize="sm"
             fontWeight="md"
-             color="#ccc"
+            color="#ccc"
             _dark={{
               color: 'gray.50',
             }}>
             About (required) min 30 words.
           </FormLabel>
-          <Textarea
-            placeholder="you@example.com"
+          <Input
+            name="about"
+            value={formData.about}
+            onChange={handleInputChange}
+            placeholder=""
             rows={3}
             shadow="sm"
             focusBorderColor="brand.400"
             fontSize={{
               sm: 'sm',
             }}
-             color="#ccc"
+            color="#ccc"
+
           />
-          <FormHelperText  color="#29B6F6">
-            Brief description for your profile. URLs are hyperlinked.
+          <FormHelperText color="#29B6F6">
+            What you want from us, web development services for your business or you want to contribute in development describe your concern above.
           </FormHelperText>
         </FormControl>
       </SimpleGrid>
@@ -340,6 +371,27 @@ export default function Form() {
   const toast = useToast()
   const [step, setStep] = useState(1)
   const [progress, setProgress] = useState(33.33)
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    contact: '',
+    country: '',
+    streetAddress: '',
+    city: '',
+    state: '',
+    postalCode: '',
+    website: '',
+    about: '',
+  })
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+    console.log(" your formData",formData)
+  }
 
   return (
     <>
@@ -352,7 +404,7 @@ export default function Form() {
         m="auto"
         as="form">
         <Progress hasStripe value={progress} mb="5%" mx="5%" isAnimated></Progress>
-        {step === 1 ? <Form1 /> : step === 2 ? <Form2 /> : <Form3 />}
+        {step === 1 ? <Form1 formData={formData} handleInputChange={handleInputChange} /> : step === 2 ? <Form2 formData={formData} handleInputChange={handleInputChange} /> : <Form3 formData={formData} handleInputChange={handleInputChange} />}
         <ButtonGroup mt="5%" w="100%">
           <Flex w="100%" justifyContent="space-between">
             <Flex>
@@ -369,14 +421,9 @@ export default function Form() {
                 Back
               </Button>
               <Button
-                w="7rem"
+                w="7rem" mr="5px"
                 isDisabled={step === 3}
                 onClick={() => {
-
-
-
-
-
 
                   setStep(step + 1)
                   if (step === 3) {
@@ -413,3 +460,5 @@ export default function Form() {
     </>
   )
 }
+
+

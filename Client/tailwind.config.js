@@ -82,7 +82,11 @@ module.exports = {
         "marquee": {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(calc(-100% - var(--gap)))" },
-        }
+        },
+        "background-position-spin": {
+          "0%": { backgroundPosition: "top center" },
+          "100%": { backgroundPosition: "bottom center" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -90,7 +94,7 @@ module.exports = {
         "meteor": "meteor 5s linear infinite",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         "marquee": "marquee var(--duration) linear infinite",
-        
+        "backgroundPositionSpin": "background-position-spin 3000ms infinite alternate",
       },
     },
   },

@@ -19,9 +19,15 @@ import {
   Textarea,
   FormHelperText,
   InputRightElement,
+  SkeletonCircle,
+  SkeletonText,
 } from '@chakra-ui/react'
 
 import { useToast } from '@chakra-ui/react'
+import axios from 'axios'
+import { BorderBeam } from '@/components/magicui/border-beam'
+import { NeonGradientCard } from '@/components/magicui/neon-gradient-card'
+import { NeonGradientCardDemo } from '@/components/CustomComponents/NeonGradientCardDemo'
 
 const Form1 = ({ formData, handleInputChange }) => {
   const [show, setShow] = useState(false)
@@ -384,82 +390,128 @@ export default function Form() {
     website: '',
     about: '',
   })
+  const [loading, setLoading] = useState(false);
 
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     })
-    console.log(" your formData",formData)
+    // console.log(" your formData", formData)
+
+  }
+  const handleSubmit = async (evt) => {
+    evt.preventDefault();
+
+    try {
+      setLoading(true);
+      const res = await axios.post("https://corswebduo.onrender.com/formdata/post", formData);
+      // console.log("result", res);
+      if (res.status === 200) {
+        setLoading(false);
+        toast({
+          title: 'Form Submitted.',
+          description: "We've Recived your data in backend.",
+          status: 'success',
+          duration: 5000,
+          isClosable: true,
+        })
+      }
+    } catch (error) {
+      console.log("error in making post request to the server...", error)
+      setLoading(true);
+      toast({
+        title: 'Server error...',
+        description: "Somthing went wrong to send data in backend.",
+        status: 'error',
+        duration: 5000,
+        isClosable: true,
+      })
+    }
   }
 
   return (
     <>
-      <Box
-        borderWidth="1px"
-        rounded="lg"
-        shadow="1px 1px 3px rgba(0,0,0,0.3)"
-        maxWidth={800}
-        p={4}
-        m="auto"
-        as="form">
-        <Progress rounded={"md"} hasStripe value={progress} mb="5%" mx="5%" isAnimated></Progress>
-        {step === 1 ? <Form1 formData={formData} handleInputChange={handleInputChange} /> : step === 2 ? <Form2 formData={formData} handleInputChange={handleInputChange} /> : <Form3 formData={formData} handleInputChange={handleInputChange} />}
-        <ButtonGroup mt="5%" w="100%">
-          <Flex w="100%" justifyContent="space-between">
-            <Flex>
-              <Button
-                onClick={() => {
-                  setStep(step - 1)
-                  setProgress(progress - 33.33)
-                }}
-                isDisabled={step === 1}
-                colorScheme="blue"
-                variant="solid"
-                w="7rem"
-                mr="5%">
-                Back
-              </Button>
-              <Button
-                w="7rem" mr="5px"
-                isDisabled={step === 3}
-                onClick={() => {
+      {loading ? (
+        <>
+          <Box w="100%" h="100vh" bg="#000">
+            <Box padding='6' bg="#000" w="50%" h="auto" boxShadow='lg'>
+              <SkeletonCircle size='10' />
+              <SkeletonText mt='4' noOfLines={4} spacing='4' skeletonHeight='5' />
+            </Box>
+            <Box padding='6' bg="#000" w="100%" h="auto" boxShadow='lg' >
+              <SkeletonCircle size='100px' />
+              <SkeletonText mt='4' noOfLines={4} spacing='4' skeletonHeight='7' />
+            </Box>
+          </Box>
+        </>
+      ) : (
+        <>
 
-                  setStep(step + 1)
-                  if (step === 3) {
-                    setProgress(100)
-                  } else {
-                    setProgress(progress + 33.33)
-                  }
-                }}
-                colorScheme="blue"
-                variant="outline">
-                Next
-              </Button>
-            </Flex>
-            {step === 3 ? (
-              <Button
-                w="7rem"
-                colorScheme="red"
-                variant="solid"
-                onClick={() => {
-                  toast({
-                    title: 'Account created.',
-                    description: "We've created your account for you.",
-                    status: 'success',
-                    duration: 3000,
-                    isClosable: true,
-                  })
-                }}>
-                Submit
-              </Button>
-            ) : null}
-          </Flex>
-        </ButtonGroup>
-      </Box>
-      <Box p="50px" bg="#000"></Box>
+          <NeonGradientCard  className="max-w-sm items-center justify-center text-center">
+            <Box
+              h="auto"
+              // borderWidth="1px"
+              overflow={"hidden"}
+              position={"relative"}
+              rounded="lg"
+              shadow="1px 1px 3px rgba(0,0,0,0.3)"
+              maxWidth={800}
+              p={4}
+              m="auto"
+              as="form">
+              <Progress rounded={"md"} hasStripe value={progress} mb="5%" mx="5%" isAnimated></Progress>
+              {step === 1 ? <Form1 formData={formData} handleInputChange={handleInputChange} /> : step === 2 ? <Form2 formData={formData} handleInputChange={handleInputChange} /> : <Form3 formData={formData} handleInputChange={handleInputChange} />}
+              <ButtonGroup mt="5%" w="100%">
+                <Flex w="100%" justifyContent="space-between">
+                  <Flex>
+                    <Button
+                      onClick={() => {
+                        setStep(step - 1)
+                        setProgress(progress - 33.33)
+                      }}
+                      isDisabled={step === 1}
+                      colorScheme="blue"
+                      variant="solid"
+                      w="7rem"
+                      mr="5%">
+                      Back
+                    </Button>
+                    <Button
+                      w="7rem" mr="5px"
+                      isDisabled={step === 3}
+                      onClick={() => {
+
+                        setStep(step + 1)
+                        if (step === 3) {
+                          setProgress(100)
+                        } else {
+                          setProgress(progress + 33.33)
+                        }
+                      }}
+                      colorScheme="blue"
+                      variant="outline">
+                      Next
+                    </Button>
+                  </Flex>
+                  {step === 3 ? (
+                    <Button
+                      w="7rem"
+                      colorScheme="red"
+                      variant="solid"
+                      onClick={handleSubmit}>
+                      Submit
+                    </Button>
+                  ) : null}
+                </Flex>
+              </ButtonGroup>
+            </Box>
+          </NeonGradientCard>
+          <Box p="50px" bg="#000"></Box>
+
+        </>
+      )}
     </>
   )
 }
-
 

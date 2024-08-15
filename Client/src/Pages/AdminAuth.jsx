@@ -53,7 +53,7 @@ export default function UserProfileEdit() {
         email: email,
         password: password
     }
-    const BASE_URL = "http://localhost:3500/"
+    const BASE_URL = "https://corswebduo.onrender.com/"
     const handleAuth = async (e) => {
         e.preventDefault();
         if (clicked) {
@@ -103,13 +103,7 @@ export default function UserProfileEdit() {
                 } catch (error) {
                     setLoading(true)
                     console.log("new error in logging Admin ", error)
-                    // toast({
-                    //     title: 'Login Failed',
-                    //     description: "Correct email | password required",
-                    //     status: 'error',
-                    //     duration: 5000,
-                    //     isClosable: true,
-                    // })
+                   
                 }
             }
         }

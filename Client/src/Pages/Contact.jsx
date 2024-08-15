@@ -8,7 +8,7 @@ const Contact = () => {
     return (
         <>
             <Navbar />
-            <Box w="100%" h="100vh" bg="#000">
+            <Box w="100%" h="auto" bg="#000">
                 <Header />
                 <Form />
             </Box>

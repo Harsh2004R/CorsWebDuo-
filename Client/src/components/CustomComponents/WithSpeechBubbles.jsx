@@ -12,7 +12,8 @@ import {
     useColorModeValue,
     Image,
 } from '@chakra-ui/react';
-import CMO from "../Images/CMO.png"
+import CMO from "../Images/CMO.png";
+import CEO from "../Images/CEO.png";
 const Testimonial = ({ children }) => {
     return <Box>{children}</Box>;
 };
@@ -106,9 +107,7 @@ export default function WithSpeechBubbles() {
                             </TestimonialText>
                         </TestimonialContent>
                         <TestimonialAvatar
-                            src={
-                                'https://avatars.githubusercontent.com/u/115461808?v=4'
-                            }
+                            src={CEO}
                             name={'Harsh Sharma'}
                         // title={""}
                         />

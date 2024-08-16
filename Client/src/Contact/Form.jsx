@@ -403,32 +403,44 @@ export default function Form() {
   const handleSubmit = async (evt) => {
     evt.preventDefault();
 
+    for (let key in formData) {
+      if ((key !== 'postalCode' && key !== 'website') && formData[key] === '') {
+        toast({
+          title: 'Incomplete Form',
+          description: `Please fill in all fields before submitting.`,
+          status: 'warning',
+          duration: 5000,
+          isClosable: true,
+        });
+        return; // Prevent form submission
+      }
+    }
+
     try {
       setLoading(true);
       const res = await axios.post("https://corswebduo.onrender.com/formdata/post", formData);
-      // console.log("result", res);
       if (res.status === 200) {
         setLoading(false);
         toast({
           title: 'Form Submitted.',
-          description: "We've Recived your data in backend.",
+          description: "We've received your data in the backend.",
           status: 'success',
           duration: 5000,
           isClosable: true,
-        })
+        });
       }
     } catch (error) {
-      console.log("error in making post request to the server...", error)
-      setLoading(true);
+      console.log("Error in making POST request to the server...", error);
+      setLoading(false);
       toast({
-        title: 'Server error...',
-        description: "Somthing went wrong to send data in backend.",
+        title: 'Server Error',
+        description: "Something went wrong while sending data to the backend.",
         status: 'error',
         duration: 5000,
         isClosable: true,
-      })
+      });
     }
-  }
+  };
 
   return (
     <>
@@ -448,7 +460,7 @@ export default function Form() {
       ) : (
         <>
 
-          <NeonGradientCard  className="max-w-sm items-center justify-center text-center">
+          <NeonGradientCard className="max-w-sm items-center justify-center text-center">
             <Box
               h="auto"
               // borderWidth="1px"

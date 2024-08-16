@@ -15,8 +15,19 @@ const Details = () => {
 
     const [formData, setFormData] = useState([]);
     const [loading, setLoading] = useState(false);
-    const handleDelete = (id) => {
+    const handleDelete = async (id) => {
+        try {
+            const response = await axios.delete(`https://corswebduo.onrender.com/formdata/delete/${id}`);
 
+            if (response.status === 200) {
+                // Remove the deleted item from the state
+                setFormData(prevFormData => prevFormData.filter(item => item._id !== id));
+            } else {
+                console.error('Failed to delete the contact');
+            }
+        } catch (error) {
+            console.error(`Error in deleting contact: ${error.message}`);
+        }
     };
     useEffect(() => {
         const controller = new AbortController();
@@ -78,11 +89,11 @@ const Details = () => {
                                                 <Text color="#222" fontWeight={"600"} fontSize={{ base: "14px", md: "15px", lg: "16px" }}>City :-{" "}<Text as="span" color="#fff" fontSize={{ base: "14px", md: "15px", lg: "16px" }}>{el.city}</Text></Text>
                                                 <Text color="#222" fontWeight={"600"} fontSize={{ base: "14px", md: "15px", lg: "16px" }}>State :-{" "}<Text as="span" color="#fff" fontSize={{ base: "14px", md: "15px", lg: "16px" }}>{el.state}</Text></Text>
                                                 <Text color="#222" fontWeight={"600"} fontSize={{ base: "14px", md: "15px", lg: "16px" }}>Postal Code :-{" "}<Text as="span" color="#fff" fontSize={{ base: "14px", md: "15px", lg: "16px" }}>{el.postalCode}</Text></Text>
-                                                <Text color="#222" fontWeight={"600"} fontSize={{ base: "14px", md: "15px", lg: "16px" }}>Website | Portfolio :-{" "}<Text as="span" color="#2196F3" _hover={{ color:"#fff" }} textDecoration={"underline"} fontSize={{ base: "14px", md: "15px", lg: "16px" }}><Link to={el.website}>{el.website}</Link></Text></Text>
+                                                <Text color="#222" fontWeight={"600"} fontSize={{ base: "14px", md: "15px", lg: "16px" }}>Website | Portfolio :-{" "}<Text as="span" color="#2196F3" _hover={{ color: "#fff" }} textDecoration={"underline"} fontSize={{ base: "14px", md: "15px", lg: "16px" }}><Link to={el.website}>{el.website}</Link></Text></Text>
                                                 <Text color="#222" fontWeight={"600"} fontSize={{ base: "14px", md: "15px", lg: "16px" }}>About :-{" "}<Text as="span" color="#FFFFFF" fontSize={{ base: "14px", md: "15px", lg: "16px" }}>{el.about}</Text></Text>
                                                 <Text color="#000" fontWeight={"bolder"} fontSize={{ base: "14px", md: "15px", lg: "16px" }}>Document ID :-{" "}<Text _hover={{ color: "#fff" }} as="span" color="#FF0000" fontSize={{ base: "14px", md: "15px", lg: "16px" }}>{el._id}</Text></Text>
                                             </Box>
-                                            <MdDelete color='#fff' size={"25px"} onClick={() => handleDelete(el)} cursor="pointer" />
+                                            <MdDelete color='#fff' size={"25px"} onClick={() => handleDelete(el._id)} cursor="pointer" />
                                         </Box>
                                     );
                                 })}

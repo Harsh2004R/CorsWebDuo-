@@ -409,7 +409,7 @@ export default function Form() {
           title: 'Incomplete Form',
           description: `Please fill in all fields before submitting.`,
           status: 'warning',
-          duration: 5000,
+          duration: 10000,
           isClosable: true,
         });
         return; // Prevent form submission
@@ -425,7 +425,7 @@ export default function Form() {
           title: 'Form Submitted.',
           description: "We've received your data in the backend.",
           status: 'success',
-          duration: 5000,
+          duration: 10000,
           isClosable: true,
         });
       }
@@ -436,7 +436,7 @@ export default function Form() {
         title: 'Server Error',
         description: "Something went wrong while sending data to the backend.",
         status: 'error',
-        duration: 5000,
+        duration: 10000,
         isClosable: true,
       });
     }

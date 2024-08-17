@@ -94,40 +94,7 @@ const InstaClone = () => {
             </section>
 
 
-            {/*            
-            <section className="grid">
-                {[
-                    
-                    "https://elements-cover-images-0.imgix.net/85ec7ef7-50db-4c7f-a530-73e84dc4b711?auto=compress%2Cformat&w=710&fit=max&s=f4c4a466479a22d2bd326af5b90d85bf",
-                    "https://elements-cover-images-0.imgix.net/3fcf5b4e-aa22-4592-97bb-eb93407e1492?auto=compress%2Cformat&w=710&fit=max&s=73a5730561f93db1d5457498370f0ccb",
-                    
-                ].map((img, index) => (
-                    <div className="grid__img-holder" key={index}>
-                        <div className="grid__img-holder__inner" style={{ backgroundImage: url(${img}) }}></div>
-                    </div>
-                ))}
-            </section> */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
         </div >
     );
 };

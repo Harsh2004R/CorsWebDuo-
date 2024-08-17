@@ -12,7 +12,6 @@ const ColorArray = [
 ]
 
 const Details = () => {
-
     const [formData, setFormData] = useState([]);
     const [loading, setLoading] = useState(false);
     const handleDelete = async (id) => {

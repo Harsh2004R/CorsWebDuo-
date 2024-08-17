@@ -328,7 +328,7 @@ const Form3 = ({ formData, handleInputChange }) => {
               https://
             </InputLeftAddon>
             <Input
-              type="tel"
+              type="text"
               placeholder="www.example.com"
               focusBorderColor="brand.400"
               color="#ccc"

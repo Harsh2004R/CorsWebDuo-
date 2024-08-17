@@ -6,57 +6,88 @@ const reviews = [
     {
         name: "Sheetal",
         username: "@sheetallll._",
-        body: "This is beyond amazing. I'm in awe. Fantastic job!",
+        body: "This is beyond amazing.😮😨 I'm in awe. Fantastic job!",
         img: "https://img.freepik.com/free-psd/3d-illustration-with-online-avatar_23-2151303097.jpg?ga=GA1.1.1559264531.1691417508&semt=ais_hybrid",
     },
     {
         name: "Riya",
         username: "@travel_with_nature_2",
-        body: "I’m truly amazed by this. It’s breathtakingly beautiful. Words can’t do it justice!",
+        body: "😚😙I’m truly amazed by this. It’s breathtakingly beautiful. Words can’t do it justice!",
         img: "https://img.freepik.com/premium-photo/cheerful-female-avatar-named-mia-depicted-simplistic-cartoon-style_117038-64860.jpg?ga=GA1.1.1559264531.1691417508&semt=ais_hybrid",
     },
     {
-        name: "Diwakar",
-        username: "@diwakarr.sharma",
-        body: "This is so impressive! I’m at a loss for words. Truly phenomenal work!",
-        img: "https://img.freepik.com/premium-photo/3d-rendering-avatar-design_1258715-60589.jpg?ga=GA1.1.1559264531.1691417508&semt=ais_hybrid",
+        name: "Gunjan",
+        username: "@inkandfable06",
+        body: "It's trending naaa 🧡???",
+        img: "https://img.freepik.com/free-photo/portrait-young-woman-wearing-glasses-3d-rendering_1142-43632.jpg?ga=GA1.1.1559264531.1691417508&semt=ais_hybrid",
     },
     {
         name: "Deepanshu",
         username: "@_flabber_gasted_",
-        body: "Keep doing it we want more contents like this.",
-        img: "https://img.freepik.com/free-psd/3d-illustration-with-online-avatar_23-2151303087.jpg?ga=GA1.1.1559264531.1691417508&semt=ais_hybrid",
-    },
-    {
-        name: "Divya",
-        username: "@_divya_d_17",
-        body: "I’m totally floored by this. It’s incredibly impressive.",
+        body: "Keep doing 😍 it we want more contents like this.",
         img: "https://img.freepik.com/free-psd/3d-illustration-with-online-avatar_23-2151303087.jpg?ga=GA1.1.1559264531.1691417508&semt=ais_hybrid",
     },
     {
         name: "Ratin",
         username: "@ratinhaldarofficial",
-        body: "This is simply stunning. I’m in complete awe. Outstanding job!",
+        body: "👀 This is simply stunning. I’m in complete awe. Outstanding job!",
+        img: "https://img.freepik.com/free-photo/3d-rendering-cartoon-like-boy-ready-adventure_23-2150797558.jpg?ga=GA1.1.1559264531.1691417508&semt=ais_hybrid",
+    },
+    {
+        name: "Priya Pant",
+        username: "@pri_u2003",
+        body: "So beautiful so aligent, just looking like a wao 😂🤣",
         img: "https://img.freepik.com/free-photo/3d-rendering-cartoon-like-boy-ready-adventure_23-2150797558.jpg?ga=GA1.1.1559264531.1691417508&semt=ais_hybrid",
     },
     {
         name: "Himanshu",
         username: "@himanshu78188",
-        body: "I can't believe how amazing this is. It's truly stunning. I'm speechless!",
+        body: "I can't believe how amazing this is 😯😃😀. It's truly stunning. I'm speechless!",
         img: "https://img.freepik.com/premium-photo/3d-cartoon-style-character-boy-created-with-generative-ai_1022026-63390.jpg?ga=GA1.1.1559264531.1691417508&semt=ais_hybrid",
     },
     {
         name: "Pradeep",
         username: "@pradeep_chakrawarti.14",
-        body: "This is absolutely incredible. I'm genuinely blown away. Fantastic work!",
+        body: "This is absolutely incredible. I'm genuinely blown away. Fantastic work! 😻💜",
         img: "https://img.freepik.com/premium-photo/3d-avatar-cartoon-character_113255-94219.jpg?ga=GA1.1.1559264531.1691417508&semt=ais_hybrid",
+    },
+    {
+        name: "Divya",
+        username: "@_divya_d_17",
+        body: "I’m totally floored by this. It’s incredibly impressive.😁😲😲🤑",
+        img: "https://img.freepik.com/free-psd/3d-illustration-with-online-avatar_23-2151303087.jpg?ga=GA1.1.1559264531.1691417508&semt=ais_hybrid",
+    },
+    {
+        name: "Aashi",
+        username: "_aashiiiiiiiii",
+        body: "It's mind blowing yrrr...",
+        img: "https://img.freepik.com/premium-photo/vibrant-avatar-asian-girl-social-media-generative-ai_804788-211559.jpg?ga=GA1.1.1559264531.1691417508&semt=ais_hybrid",
+    },
+    {
+        name: "Diwakar",
+        username: "@diwakarr.sharma",
+        body: "This is so impressive! I’m at a loss for words. 😊😉🤗 Truly phenomenal work!",
+        img: "https://img.freepik.com/premium-photo/3d-rendering-avatar-design_1258715-60589.jpg?ga=GA1.1.1559264531.1691417508&semt=ais_hybrid",
+    },
+    {
+        name: "Trk Ydv",
+        username: "@tushar18.01",
+        body: "I want to join your coding club, can I ???",
+        img: " https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100221.jpg?ga=GA1.1.1559264531.1691417508&semt=ais_hybrid",
     },
     {
         name: "Dhannu",
         username: "@dhannu_69_",
-        body: "This is what I wating for from long period of time.",
+        body: "💘💥💥🤍 This is what I wating for from long period of time.",
         img: "https://img.freepik.com/premium-photo/memoji-beautiful-girl-woman-white-background-emoji_826801-6872.jpg?ga=GA1.1.1559264531.1691417508&semt=sph",
     },
+    {
+        name: "Dhami Official",
+        username: "@psdhami16",
+        body: "Can you build the exact same platform for me.",
+        img: "https://img.freepik.com/premium-photo/upgrade-your-online-presence-with-this-sleek-3d-model-showcasing-modern-sophisticated-look_1126173-72.jpg?ga=GA1.1.1559264531.1691417508&semt=ais_hybrid",
+    },
+
 
 
 ];
@@ -125,7 +156,7 @@ export function MarqueeDemo() {
                 insetY="0"
                 left="0"
                 width="33%"
-            bgGradient="linear(to-r, rgba(255,255,255,0.3), transparent)"
+                bgGradient="linear(to-r, rgba(255,255,255,0.3), transparent)"
             />
             <Box
                 pointerEvents="none"
@@ -133,7 +164,7 @@ export function MarqueeDemo() {
                 insetY="0"
                 right="0"
                 width="33%"
-            bgGradient="linear(to-l, rgba(255,255,255,0.3), transparent)"
+                bgGradient="linear(to-l, rgba(255,255,255,0.3), transparent)"
             />
         </Box>
     );

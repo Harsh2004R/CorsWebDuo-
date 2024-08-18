@@ -66,7 +66,7 @@ export function AnimatedBeamDemo() {
                         <Text
                             fontSize={{ base: "md", md: "2xl", lg: "2xl" }} bgGradient="linear(to-r, #666666, gray.200)"
                             bgClip="text"
-                            textAlign="center">Deepanshu Joshi</Text>
+                            textAlign="center">Deepanshu Bohra</Text>
                     </Box>
                     <Flex  direction="row" justifyContent="space-between">
                         <Circle ref={div1Ref} imageUrl="https://avatars.githubusercontent.com/u/115461808?v=4">
